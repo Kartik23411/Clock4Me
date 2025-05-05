@@ -1,4 +1,4 @@
-package com.example.clock4me.data
+package com.example.clock4me.data.model
 
 import androidx.room.Entity
 import androidx.room.Index
@@ -42,7 +42,10 @@ data class Alarm(
     ),
 ) {
     val daysSelected: Map<String, Boolean>
-        get() = Gson().fromJson(daysSelectedJson, object : TypeToken<Map<String, Boolean>>() {}.type)
+        get() = Gson().fromJson(
+            daysSelectedJson,
+            object : TypeToken<Map<String, Boolean>>() {}.type
+        )
 
     fun setDaysSelected(daysSelected: Map<String, Boolean>) {
         this.daysSelectedJson = Gson().toJson(daysSelected)

@@ -7,8 +7,6 @@ import java.time.temporal.ChronoUnit
 
 object GlobalProperties {
 
-    const val TIME_FORMAT = "%02d:%02d:%02d"
-
     val dateTimeFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("EEE,MMMdd")
     val nextDay: LocalDateTime = LocalDateTime.now().plus(1, ChronoUnit.DAYS)
 
