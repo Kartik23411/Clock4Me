@@ -39,7 +39,7 @@ import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.clock4me.R
+import com.example.clock4Me.R
 import com.example.clock4me.data.Alarm
 import com.example.clock4me.util.checkDate
 import com.example.clock4me.util.components.ClockAppBar

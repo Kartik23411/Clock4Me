@@ -1,5 +1,6 @@
 package com.example.clock4me.util
 
+import androidx.core.text.isDigitsOnly
 import com.example.clock4me.data.Alarm
 import com.example.clock4me.util.GlobalProperties.dateTimeFormatter
 import java.time.LocalDateTime
@@ -7,6 +8,10 @@ import java.time.LocalTime
 
 fun String?.parseInt(): Int {
     return if (this.isNullOrEmpty()) 0 else this.toInt()
+}
+
+fun String.checkNumberPicker(maxNumber: Int): Boolean {
+    return this.length <= 2 && this.isDigitsOnly() && this.parseInt() <= maxNumber
 }
 
 fun Alarm.checkDate(): String {
