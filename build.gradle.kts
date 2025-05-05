@@ -1,6 +1,24 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    val kotlinVersion by rootProject.extra { "1.9.22" }
+    val composeVersion by rootProject.extra { "1.4.3" }
+
+    dependencies {
+        classpath(libs.hilt.android.gradle.plugin)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    }
+    repositories {
+        mavenCentral()
+        google()
+    }
+} // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.kotlin.android) apply false
-    alias(libs.plugins.kotlin.compose) apply false
+    id("com.android.application") version "8.9.2" apply false
+    id("com.android.library") version "8.9.2" apply false
+    id("org.jetbrains.kotlin.android") version "2.0.21" apply false
+    id("com.google.devtools.ksp") version "1.9.22-1.0.17" apply false
+    id("com.android.test") version "8.9.2" apply false
+}
+
+task<Delete>("clean") {
+    delete(rootProject.buildDir)
 }
