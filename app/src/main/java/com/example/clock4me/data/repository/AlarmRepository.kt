@@ -1,7 +1,7 @@
 package com.example.clock4me.data.repository
 
-import com.example.clock4me.data.Alarm
 import com.example.clock4me.data.local.AlarmDao
+import com.example.clock4me.data.model.Alarm
 import kotlinx.coroutines.flow.distinctUntilChanged
 import javax.inject.Inject
 

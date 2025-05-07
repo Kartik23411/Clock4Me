@@ -1,6 +1,6 @@
 package com.example.clock4me.presentation
 
-import com.example.clock4me.data.Alarm
+import com.example.clock4me.data.model.Alarm
 
 interface AlarmActions {
     fun updateAlarmCreationState(alarm: Alarm) {}

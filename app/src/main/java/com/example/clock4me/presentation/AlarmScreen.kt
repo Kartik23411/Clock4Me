@@ -40,7 +40,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.clock4Me.R
-import com.example.clock4me.data.Alarm
+import com.example.clock4me.data.model.Alarm
 import com.example.clock4me.util.checkDate
 import com.example.clock4me.util.components.ClockAppBar
 import me.saket.swipe.SwipeAction
@@ -147,7 +147,8 @@ private fun AlarmsList(
                         alarm = item,
                         onScheduledChange = {
                             isScheduled = it
-                            val description = if (item.description.any { char -> char.isDigit() }) item.checkDate() else item.description
+                            val description =
+                                if (item.description.any { char -> char.isDigit() }) item.checkDate() else item.description
                             alarmActions.update(
                                 item.copy(
                                     isScheduled = isScheduled,
@@ -182,7 +183,7 @@ private fun Alarm(
             navigateToCreateAlarm()
             updateAlarmCreationState(alarm)
         },
-        ) {
+    ) {
         Row(
             modifier = Modifier
                 .padding(20.dp),

@@ -5,7 +5,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.core.text.isDigitsOnly
-import com.example.clock4me.data.Alarm
+import com.example.clock4me.data.model.Alarm
 import com.example.clock4me.util.GlobalProperties.dateTimeFormatter
 import java.time.LocalDateTime
 import java.time.LocalTime

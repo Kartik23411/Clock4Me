@@ -34,12 +34,11 @@ import androidx.compose.ui.Alignment.Companion.BottomCenter
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.Start
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import com.example.clock4Me.R
-import com.example.clock4me.data.Alarm
+import com.example.clock4me.data.model.Alarm
 import com.example.clock4me.util.checkDate
 import com.example.clock4me.util.checkNumberPicker
 import com.example.clock4me.util.components.CustomChip
@@ -47,9 +46,6 @@ import com.example.clock4me.util.components.NumberPicker
 import com.example.clock4me.util.components.imePaddingIfTrue
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
-import kotlin.collections.component1
-import kotlin.collections.component2
-import kotlin.collections.set
 
 @SuppressLint("UnusedBoxWithConstraintsScope")
 @Composable

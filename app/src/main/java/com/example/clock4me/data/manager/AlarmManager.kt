@@ -7,7 +7,7 @@ import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
-import com.example.clock4me.data.Alarm
+import com.example.clock4me.data.model.Alarm
 import com.example.clock4me.data.receiver.AlarmBroadcastReceiver
 import com.example.clock4me.data.receiver.DAYS_SELECTED
 import com.example.clock4me.data.receiver.HOUR
